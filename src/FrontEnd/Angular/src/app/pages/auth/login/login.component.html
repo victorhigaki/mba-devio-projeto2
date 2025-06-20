@@ -1,1 +1,15 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div>
+    <app-base-input formControlName="email"></app-base-input>
+  </div>
+
+  <div>
+    <app-base-input formControlName="password"></app-base-input>
+  </div>
+
+  <app-base-button type="submit">Login</app-base-button>
+</form>
+
+@if (isDevelopment) {
+    {{ request | json }}
+}

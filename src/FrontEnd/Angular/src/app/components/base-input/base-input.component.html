@@ -1,1 +1,17 @@
-<p>base-input works!</p>
+<!-- <input
+  class="form-control"
+  [type]="type()"
+  [value]="value"
+  (input)="onChange($any($event.target).value)"
+  (blur)="onTouched($any($event.target).value)"
+  (keyup)="writeValue($any($event.target).value)"
+/> -->
+
+<input
+  class="form-control"
+  [type]="type()"
+  [value]="value"
+  (input)="onChange && onChange($any($event.target).value)"
+  (blur)="onTouched && onTouched()"
+  (keyup)="writeValue($any($event.target).value)"
+/>
